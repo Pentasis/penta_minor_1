@@ -5,7 +5,6 @@ local modTowns       = require "penta_minor/towns"
 local modTweaks      = require "penta_minor/tweaks"
 local modEnvironment = require "penta_minor/environment"
 local modGui         = require "penta_minor/gui"
-local modParticles   = require "penta_minor/particles"
 
 -- ---------------------------------------------------------------------
 
@@ -36,7 +35,6 @@ function data()
             modTweaks.initTweaks()
             modEnvironment.initEnvironmentChanges()
             modGui.initGui()
-            modParticles.adjustPArticles()
         end
         -- postRunFn = function (settings, params) ...
     }
