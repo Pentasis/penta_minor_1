@@ -5,6 +5,7 @@ local modTowns       = require "penta_minor/towns"
 local modTweaks      = require "penta_minor/tweaks"
 local modEnvironment = require "penta_minor/environment"
 local modGui         = require "penta_minor/gui"
+local modParticles   = require "penta_minor/particles"
 
 -- ---------------------------------------------------------------------
 
@@ -22,10 +23,12 @@ function data()
             minorVersion   = 0,
             severityAdd    = "WARNING",
             severityRemove = "CRITICAL",
-            params         = { }
+            params         = {}
         },
         options = {},
         runFn   = function(settings, modParams)
+            math.randomseed(os.time())
+
             modTracks.initTrackChanges()
             modVehicles.initCargoChanges()
             modRoads.initStreetChanges()
@@ -33,6 +36,7 @@ function data()
             modTweaks.initTweaks()
             modEnvironment.initEnvironmentChanges()
             modGui.initGui()
+            modParticles.adjustPArticles()
         end
         -- postRunFn = function (settings, params) ...
     }
