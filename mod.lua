@@ -8,7 +8,7 @@ local modGui         = require "penta_minor/gui"
 
 -- ---------------------------------------------------------------------
 
-function data()
+function industry()
     return {
         info    = {
             name           = _("Penta Minor"),
