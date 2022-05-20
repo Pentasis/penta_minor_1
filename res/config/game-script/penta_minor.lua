@@ -7,6 +7,6 @@ function data()
                 game.interface.setGameSpeed(0)
                 isGamePaused = true
             end
-        end,
+        end
     }
 end

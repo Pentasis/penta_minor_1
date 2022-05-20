@@ -85,10 +85,10 @@ local function changeWardrobe(filename, character)
     if string.find(filename, "/model/characters/") ~= nil then
         charName = GetFileName(filename)
         charName = string.sub(charName, 1, -5)
-        print(charName)
-        if charlist[charName] ~= nil then
-            character.metadata.availability.yearFrom = charlist[charName][1]
-            character.metadata.availability.yearTo = charlist[charName][2]
+
+        if charList[charName] ~= nil then
+            character.metadata.availability.yearFrom = charList[charName][1]
+            character.metadata.availability.yearTo = charList[charName][2]
         end
     end
 
@@ -101,10 +101,10 @@ local function changeCars(filename, car)
     if string.find(filename, "/model/vehicle/car/") ~= nil then
         carName = GetFileName(filename)
         carName = string.sub(carName, 1, -5)
-        print(carName)
-        if carlist[carName] ~= nil then
-            car.metadata.availability.yearFrom = carlist[carName][1]
-            car.metadata.availability.yearTo = carlist[carName][2]
+
+        if carList[carName] ~= nil then
+            car.metadata.availability.yearFrom = carList[carName][1]
+            car.metadata.availability.yearTo = carList[carName][2]
         end
     end
 
@@ -126,7 +126,6 @@ local function workAtIndustry(filename, industry)
             return result
         end
     end
-
     return industry
 end
 

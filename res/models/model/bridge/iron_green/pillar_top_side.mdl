@@ -1,0 +1,70 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1.6999999284744, 0, -2, },
+		bbMin = { -1.6999999284744, -2.2000000476837, -4, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1.6999999284744, 1.100076675415, 1.1000000238419, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "bridge/iron_green.mtl", },
+						mesh = "bridge/iron/pillar_top_side/iron_pillar_top_side_lod0.msh",
+						name = "iron_pillar_top_side",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 200,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "bridge/iron_green.mtl", },
+						mesh = "bridge/iron/pillar_top_side/iron_pillar_top_side_lod1.msh",
+						name = "iron_pillar_top_side",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 200,
+			visibleTo = 1000,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "bridge/iron_green.mtl", },
+						mesh = "bridge/iron/pillar_top_side/iron_pillar_top_side_lod2.msh",
+						name = "iron_pillar_top_side",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 1000,
+			visibleTo = 2500,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

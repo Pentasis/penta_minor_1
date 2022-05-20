@@ -1,0 +1,67 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 6, 0, 0, },
+		bbMin = { 0, -2, -2, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 3, 0.39999997615814, 1, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						children = {
+							{
+								name = "iron_bridge_bone_6m_start",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2, 0, 1, },
+							},
+							{
+								name = "iron_bridge_bone_6m_1",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3, 2, 0, 1, },
+							},
+							{
+								name = "iron_bridge_bone_6m_end",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6, 2, 0, 1, },
+							},
+						},
+						name = "container_6m",
+						skin = "bridge/iron/railing_start_side2_no_side/iron_railing_start_side2_no_side_lod0.msh",
+						skinMaterials = { "bridge/iron_dark_green_skinned.mtl", },
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 500,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "bridge/iron_dark_green.mtl", },
+						mesh = "bridge/iron/railing_start_side2_no_side/iron_railing_start_side2_no_side_lod1.msh",
+						name = "iron_railing_start_side2_no_side",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 500,
+			visibleTo = 2500,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end
