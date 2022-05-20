@@ -22,3 +22,10 @@
 - Tweaked distance for open/close railroad crossings
 - Option less grid-street layout
 - Always start game paused
+
+TODO:
+- textures
+- bridge repair
+- icons
+- gamesetting time of day
+-
