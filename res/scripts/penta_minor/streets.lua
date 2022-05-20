@@ -1,6 +1,16 @@
-local helper  = require "penta_minor/helpers"
+local helper = require "penta_minor/helpers"
 
 local streets = {}
+
+local function has_value(table, value)
+    for _, v in pairs(table) do
+        if v == value then
+            return true
+        end
+    end
+
+    return false
+end
 
 local function doChanges(street)
     -- Vanilla values are 20% (.2) for SlopeBuild & 0.75 for Embankment
@@ -18,7 +28,7 @@ local function changeStreetSlope(filename, street)
     -- TODO: clean this mess up, but combining conditional throws "not a table" error.
 
     if street.transportModesStreet ~= nil then
-        if not helper.has_value(street.transportModesStreet, "AIRCRAFT") and not helper.has_value(street.transportModesStreet, "SHIP") then
+        if not has_value(street.transportModesStreet, "AIRCRAFT") and not has_value(street.transportModesStreet, "SHIP") then
             if street.maxSlopeBuild == nil then
                 street = doChanges(street)
             end
@@ -29,6 +39,7 @@ local function changeStreetSlope(filename, street)
 
     return street
 end
+
 -- ---------------------------------------------------------------------
 
 function streets.initStreetChanges()
