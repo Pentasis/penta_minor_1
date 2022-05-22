@@ -1,0 +1,76 @@
+function data()
+    return {
+        numLanes = 2,
+        streetWidth = 6.0,
+        sidewalkWidth = 0.6,
+        sidewalkHeight = .0,
+        yearFrom = 0,
+        yearTo = 0,
+        aiLock = true,
+        country = true,
+        speed = 30.0,
+        type = "country old trees",
+        name = _("Rural dirt with Trees"),
+        desc = _("Treelined Dirt road 30 km/h."),
+        categories = { "rural_road" },
+        materials = {
+            streetPaving = {
+                name = "street/old_country_dirt_01.mtl",
+                size = { 60.0, 60.0 }
+            }
+        },
+        assets = {
+            {
+                name = "tree/european_linden.mdl",
+                offset = 1,
+                distance = 13.0,
+                prob = 0.9,
+                offsetOrth = -10,
+                randRot = true,
+                oneSideOnly = false,
+                alignToElevation = false,
+                avoidFaceEdges = false,
+                placeOnBridge = false,
+            },
+            {
+                name = "tree/common_hazel.mdl",
+                offset = 1,
+                distance = 3.0,
+                prob = 0.9,
+                offsetOrth = -4,
+                randRot = true,
+                oneSideOnly = false,
+                alignToElevation = false,
+                avoidFaceEdges = false,
+                placeOnBridge = false,
+            },
+            {
+                name = "tree/elderberry.mdl",
+                offset = 2,
+                distance = 3.0,
+                prob = 0.3,
+                offsetOrth = -3,
+                randRot = true,
+                oneSideOnly = false,
+                alignToElevation = false,
+                avoidFaceEdges = false,
+                placeOnBridge = false,
+            },
+            {
+                name = "tree/shingle_oak.mdl",
+                offset = 4,
+                distance = 27.0,
+                prob = 0.5,
+                offsetOrth = -12,
+                randRot = true,
+                oneSideOnly = false,
+                alignToElevation = false,
+                avoidFaceEdges = false,
+                placeOnBridge = false,
+            }
+        },
+        borderGroundTex = "none.lua",
+        sidewalkFillGroundTex = "",
+        cost = 10.0,
+    }
+end

@@ -6,18 +6,18 @@ function data()
         sidewalkHeight = .00,
         yearFrom = 1925,
         yearTo = 0,
-        upgrade = false,
-        country = false,
-        speed = 70.0,
+        aiLock = true,
+        country = true,
+        speed = 60.0,
         type = "new small",
-        name = _("Very small green track"),
-        desc = _("Two-lane priority green track with a speed limit of %2% - enable bus and tram track"),
-        categories = { "tram" },
+        name = _("Tram on grass"),
+        desc = _("Tram tracks only on grass."),
+        categories = { "tram_tracks" },
         borderGroundTex = "none.lua",
         sidewalkFillGroundTex = "none.lua",
         materials = {
             streetPaving = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 6.0, 6.0 }
             },
             --streetBorder = {
@@ -26,7 +26,7 @@ function data()
 
             --},
             streetLane = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 4.0, 4.0 }
             },
             streetStripe = {
@@ -39,7 +39,7 @@ function data()
 
             },
             streetTram = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 2.0, 2.0 }
             },
             streetTramTrack = {
@@ -47,14 +47,14 @@ function data()
                 size = { 2.0, 2.0 }
             },
             crossingLane = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 4.0, 4.0 }
             },
             crossingBus = {
                 name = ""
             },
             crossingTram = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 2.0, 2.0 }
             },
             crossingTramTrack = {
@@ -65,7 +65,7 @@ function data()
                 name = ""
             },
             sidewalkPaving = {
-                name = "street/gras.mtl",
+                name = "street/rural_grass.mtl",
                 size = { 6.0, 6.0 }
             },
             sidewalkLane = {

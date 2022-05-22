@@ -2,9 +2,11 @@ local tracks = {}
 
 local function addVanillaCategory(filename, track)
     if filename == "res/config/track/standard.lua" then
-        track.categories = {"Standard"}
+        track.categories = { "wooden_tracks" }
+        track.desc = "Standard wooden tracks with max speed of 120 km/h"
     elseif filename == "res/config/track/high_speed.lua" then
-        track.categories = {"High-Speed"}
+        track.categories = { "concrete_tracks" }
+        track.desc = "High-speed concrete tracks with max speed of 300 km/h"
     end
 
     return track

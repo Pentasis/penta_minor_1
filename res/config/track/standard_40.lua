@@ -1,83 +1,83 @@
 function data()
-	local t = { }
+    local t = {}
 
-	t.name = _("Standard tracks 40 km/h")
-	t.desc = _("Standard wooden tracks limited to 40km/h.")
-	t.categories = {"Standard"}
+    t.name = _("Standard tracks 40 km/h")
+    t.desc = _("Standard wooden tracks limited to 40km/h.")
+    t.categories = { "wooden_tracks" }
 
-	t.yearFrom = 0
-	t.yearTo = 0
+    t.yearFrom = 0
+    t.yearTo = 0
 
-	t.shapeWidth = 4.0
-	t.shapeStep = 4.0
-	t.shapeSleeperStep = 8.0 / 12.0
+    t.shapeWidth = 4.0
+    t.shapeStep = 4.0
+    t.shapeSleeperStep = 8.0 / 12.0
 
-	t.ballastHeight = .3
-	t.ballastCutOff = .1
+    t.ballastHeight = .3
+    t.ballastCutOff = .1
 
-	t.sleeperBase = t.ballastHeight
-	t.sleeperLength = .26
-	t.sleeperWidth = 2.6
-	t.sleeperHeight = .08
-	t.sleeperCutOff = .02
+    t.sleeperBase = t.ballastHeight
+    t.sleeperLength = .26
+    t.sleeperWidth = 2.6
+    t.sleeperHeight = .08
+    t.sleeperCutOff = .02
 
-	t.railTrackWidth = 1.435
-	t.railBase = t.sleeperBase + t.sleeperHeight
-	t.railHeight = .15
-	t.railWidth = .07
-	t.railCutOff = .02
-    
+    t.railTrackWidth = 1.435
+    t.railBase = t.sleeperBase + t.sleeperHeight
+    t.railHeight = .15
+    t.railWidth = .07
+    t.railCutOff = .02
+
     t.embankmentSlopeLow = 0.75
     t.embankmentSlopeHigh = 2.5
 
-	t.catenaryBase = 5.917 + t.railBase + t.railHeight
-	t.catenaryHeight = 1.35
-	t.catenaryPoleDistance = 32.0
-	t.catenaryMaxPoleDistanceFactor = 2.0
-	t.catenaryMinPoleDistanceFactor = 0.8
+    t.catenaryBase = 5.917 + t.railBase + t.railHeight
+    t.catenaryHeight = 1.35
+    t.catenaryPoleDistance = 32.0
+    t.catenaryMaxPoleDistanceFactor = 2.0
+    t.catenaryMinPoleDistanceFactor = 0.8
 
-	t.trackDistance = 5.0
+    t.trackDistance = 5.0
 
-	t.speedLimit = 40.0 / 3.6
-	t.speedCoeffs = { .85, 30.0, .6 }		-- curve speed limit = a * (radius + b) ^ c
-	
-	t.minCurveRadius = 44.0
-	t.minCurveRadiusBuild = 60.0
-	
-	t.maxSlopeBuild = 0.075
-	t.maxSlope = t.maxSlopeBuild * 1.6
-	t.maxSlopeShape = t.maxSlope * 1.25
-	
-	t.slopeBuildSteps = 2
+    t.speedLimit = 40.0 / 3.6
+    t.speedCoeffs = { .85, 30.0, .6 } -- curve speed limit = a * (radius + b) ^ c
 
-	t.ballastMaterial = "track/ballast.mtl"
-	t.sleeperMaterial = "track/sleeper.mtl"
-	t.railMaterial = "track/rail.mtl"
-	t.catenaryMaterial = "track/catenary.mtl"
-	t.tunnelWallMaterial = "track/tunnel_rail_ug.mtl"
-	t.tunnelHullMaterial = "track/tunnel_hull.mtl"
+    t.minCurveRadius = 44.0
+    t.minCurveRadiusBuild = 60.0
 
-	t.catenaryPoleModel = "railroad/power_pole_us_2.mdl"
-	t.catenaryMultiPoleModel = "railroad/power_pole_us_1_pole.mdl"
-	t.catenaryMultiGirderModel = "railroad/power_pole_us_1a_repeat.mdl"
-	t.catenaryMultiInnerPoleModel = "railroad/power_pole_us_1b_pole2.mdl"
+    t.maxSlopeBuild = 0.075
+    t.maxSlope = t.maxSlopeBuild * 1.6
+    t.maxSlopeShape = t.maxSlope * 1.25
 
-	t.bumperModel = "railroad/bumper.mdl"
-	t.switchSignalModel = "railroad/switch_box.mdl"
+    t.slopeBuildSteps = 2
 
-	t.fillGroundTex = "ballast_fill.lua"
-	t.borderGroundTex = "ballast.lua"
-	
-	t.railModel ="railroad/tracks/single_rail.mdl"
-	t.sleeperModel = "railroad/tracks/single_sleeper_base.mdl"
-	t.trackStraightModel = {
-		"railroad/tracks/2m_base.mdl",
-		"railroad/tracks/4m_base.mdl",
-		"railroad/tracks/8m_base.mdl",
-		"railroad/tracks/16m_base.mdl",
-	}
+    t.ballastMaterial = "track/ballast.mtl"
+    t.sleeperMaterial = "track/sleeper.mtl"
+    t.railMaterial = "track/rail.mtl"
+    t.catenaryMaterial = "track/catenary.mtl"
+    t.tunnelWallMaterial = "track/tunnel_rail_ug.mtl"
+    t.tunnelHullMaterial = "track/tunnel_hull.mtl"
 
-	t.cost = 75.0
+    t.catenaryPoleModel = "railroad/power_pole_us_2.mdl"
+    t.catenaryMultiPoleModel = "railroad/power_pole_us_1_pole.mdl"
+    t.catenaryMultiGirderModel = "railroad/power_pole_us_1a_repeat.mdl"
+    t.catenaryMultiInnerPoleModel = "railroad/power_pole_us_1b_pole2.mdl"
 
-	return t
+    t.bumperModel = "railroad/bumper.mdl"
+    t.switchSignalModel = "railroad/switch_box.mdl"
+
+    t.fillGroundTex = "ballast_fill.lua"
+    t.borderGroundTex = "ballast.lua"
+
+    t.railModel = "railroad/tracks/single_rail.mdl"
+    t.sleeperModel = "railroad/tracks/single_sleeper_base.mdl"
+    t.trackStraightModel = {
+        "railroad/tracks/2m_base.mdl",
+        "railroad/tracks/4m_base.mdl",
+        "railroad/tracks/8m_base.mdl",
+        "railroad/tracks/16m_base.mdl",
+    }
+
+    t.cost = 75.0
+
+    return t
 end

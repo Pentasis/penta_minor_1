@@ -1,0 +1,70 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4, 1.2999999523163, 0.53000003099442, },
+		bbMin = { -4, -1.2999999523163, 0.29999998211861, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 4, 1.2999999523163, 0.1150000244379, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "track/old_track_rail.mtl", "track/old_track_sleeper.mtl", },
+						mesh = "railroad/tracks/8m_base/8m_base_lod0.msh",
+						name = "8m_base",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 30,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "track/old_track_sleeper.mtl", "track/old_track_rail.mtl", },
+						mesh = "railroad/tracks/8m_base/8m_base_lod1.msh",
+						name = "8m_base",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 30,
+			visibleTo = 250,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "track/old_track_track_standard.mtl", },
+						mesh = "railroad/tracks/8m_base/8m_base_lod2.msh",
+						name = "8m_base",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 250,
+			visibleTo = 1000,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

@@ -44,7 +44,7 @@ function data()
 
         carriers = { "RAIL", "ROAD" },
 
-        speedLimit = 180.0 / 3.6,
+        speedLimit = 200.0 / 3.6,
 
         pillarLen = 3,
 

@@ -1,0 +1,45 @@
+function data()
+return {
+	order = 5,
+	params = {
+		alpha_scale = {
+			alphaScale = 1,
+		},
+		alpha_test = {
+			alphaThreshold = 0.5,
+			cutout = false,
+		},
+		fade_out_range = {
+			fadeOutEndDist = 20000,
+			fadeOutStartDist = 10000,
+		},
+		map_albedo_opacity = {
+			fileName = "streets/asphalt_tram.dds",
+			type = "TWOD",
+			wrapS = "REPEAT",
+		},
+		map_metal_gloss_ao = {
+			fileName = "streets/asphalt_tram_metal_gloss_ao.dds",
+			type = "TWOD",
+		},
+		map_normal = {
+			fileName = "streets/tram_track_nrml.dds",
+			redGreen = true,
+			type = "TWOD",
+			wrapS = "REPEAT",
+		},
+		normal_scale = {
+			normalScale = 1,
+		},
+		polygon_offset = {
+			factor = -6,
+			units = -3,
+		},
+		two_sided = {
+			flipNormal = false,
+			twoSided = false,
+		},
+	},
+	type = "PHYS_TRANSPARENT_NRML_MAP",
+}
+end

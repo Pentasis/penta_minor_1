@@ -1,0 +1,73 @@
+function data()
+return {
+	order = 0,
+	params = {
+		albedo_scale = {
+			albedoScale = { 1, 1, 1, },
+		},
+		ambient_occlusion_scale = {
+			ambientOcclusionScale = 1,
+		},
+		fade_out_range = {
+			fadeOutEndDist = 20000,
+			fadeOutStartDist = 10000,
+		},
+		map_albedo = {
+			fileName = "terrain/asphalt_03_albedo.dds",
+			type = "TWOD",
+			wrapS = "REPEAT",
+			wrapT = "REPEAT",
+		},
+		map_metal_gloss_ao = {
+			fileName = "terrain/asphalt_03_metal_gloss_ao_h.dds",
+			type = "TWOD",
+			wrapS = "REPEAT",
+			wrapT = "REPEAT",
+		},
+		map_normal = {
+			fileName = "terrain/asphalt_03_nrml.dds",
+			redGreen = true,
+			type = "TWOD",
+			wrapS = "REPEAT",
+			wrapT = "REPEAT",
+		},
+		map_op_1 = {
+			fileName = "models/industry/overlay_textures/small_03.tga",
+			type = "TWOD",
+			wrapS = "REPEAT",
+			wrapT = "REPEAT",
+		},
+		map_op_2 = {
+			fileName = "streets/new_overlay.dds",
+			type = "TWOD",
+			wrapS = "REPEAT",
+			wrapT = "REPEAT",
+		},
+		normal_scale = {
+			normalScale = 1,
+		},
+		operation_1 = {
+			mode = "WORLD_XY",
+			op = "OVERLAY",
+			opacity = 0.10000000149012,
+			scale = { 0.0049999998882413, 0.0049999998882413, },
+		},
+		operation_2 = {
+			mode = "WORLD_XY",
+			op = "OVERLAY",
+			opacity = 0.40000000596046,
+			scale = { 0.0049999998882413, 0.0049999998882413, },
+		},
+		polygon_offset = {
+			factor = -2,
+			units = -2,
+			forceDepthWrite = true,
+		},
+		two_sided = {
+			flipNormal = false,
+			twoSided = false,
+		},
+	},
+	type = "PHYSICAL_NRML_MAP_OP",
+}
+end
