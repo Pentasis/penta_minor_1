@@ -111,28 +111,9 @@ local function changeCars(filename, car)
     return car
 end
 
-local function workAtIndustry(filename, industry)
-    local updateFn = industry.updateFn
-    if industry.type == "INDUSTRY" then
-        industry.updateFn = function(params)
-            local result = updateFn(params)
-            if result.rule ~= nil and not result.personCapacity then
-                result.personCapacity = {
-                    type = "INDUSTRIAL",
-                    capacity = math.ceil(result.rule.capacity / 4),
-                }
-            end
-
-            return result
-        end
-    end
-    return industry
-end
-
 function cims.changeBehaviour()
     addModifier("loadModel", changeWardrobe)
     addModifier("loadModel", changeCars)
-    addModifier("loadConstruction", workAtIndustry)
 end
 
 return cims

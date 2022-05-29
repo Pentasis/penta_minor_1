@@ -2,6 +2,7 @@ local paramBuilder = require "parambuilder_v1_1"
 
 local modTracks      = require "penta_minor/tracks"
 local modVehicles    = require "penta_minor/cargo_vehicles"
+local modIndustry    = require "penta_minor/industry"
 local modRoads       = require "penta_minor/streets"
 local modTowns       = require "penta_minor/towns"
 local modCims        = require "penta_minor/cims"
@@ -40,6 +41,7 @@ function data()
 
             modTracks.initTrackChanges()
             modVehicles.initCargoChanges()
+            modIndustry.initIndustry()
             modRoads.initStreetChanges()
             modTowns.initTownChanges() -- paramTownDevelop.getBool(params)
             modCims.changeBehaviour()

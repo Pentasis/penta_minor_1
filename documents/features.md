@@ -15,10 +15,9 @@
 - Added category buttons for roads & tracks
 - Changed cargo-weight to be more in line with reality.
 - Created overlap in cim appearance & cars between eras.
-- Different colour for cargo icons (made them grey).
-- Parallel road/track
+- Different colour for cargo icons (made them grey-ish).
 - Option to set maintenance interval
-- Option to stop town-growth
+- Option to stop town-growth/filter levels
 - Tweaked distance for open/close railroad crossings
 - Option less grid-street layout
 - Always start game paused
