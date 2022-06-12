@@ -10,11 +10,10 @@ local function changeRenderDistance()
     }
 end
 
--- ---------------------------------------------------------------------
+-- ================================================================== --
 
-function environment.initEnvironmentChanges()
+function environment.tweakEnvironment()
     changeRenderDistance()
-
 end
 
 return environment

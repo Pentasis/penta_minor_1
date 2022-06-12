@@ -1,6 +1,6 @@
 local cims = {}
 
-local charList = {
+local CIMS = {
     era_a_driver_rail = { 0, 1935 },
     era_a_driver_road = { 0, 1921 },
     era_a_driver_water = { 0, 1935 },
@@ -39,7 +39,7 @@ local charList = {
     era_c_wom_04 = { 1980, 0 }
 }
 
-local carList = {
+local CARS = {
     avant = { 1934, 1977 },
     beetle_1948 = { 1945, 1989 },
     cadillac_s62_deville = { 1959, 1985 },
@@ -75,45 +75,53 @@ local carList = {
     vw_type_2_t1 = { 1950, 1990 }
 }
 
+-- ------------------------------------------------------------------ --
+
 local function GetFileName(url)
     return url:match("^.+/(.+)$")
 end
 
-local function changeWardrobe(filename, character)
+-- ------------------------------------------------------------------ --
+
+local function overlapWardrobe(filename, character)
     local charName = ""
 
     if string.find(filename, "/model/characters/") ~= nil then
         charName = GetFileName(filename)
         charName = string.sub(charName, 1, -5)
 
-        if charList[charName] ~= nil then
-            character.metadata.availability.yearFrom = charList[charName][1]
-            character.metadata.availability.yearTo = charList[charName][2]
+        if CIMS[charName] ~= nil then
+            character.metadata.availability.yearFrom = CIMS[charName][1]
+            character.metadata.availability.yearTo = CIMS[charName][2]
         end
     end
 
     return character
 end
 
-local function changeCars(filename, car)
+-- ------------------------------------------------------------------ --
+
+local function overlapCars(filename, car)
     local carName = ""
 
     if string.find(filename, "/model/vehicle/car/") ~= nil then
         carName = GetFileName(filename)
         carName = string.sub(carName, 1, -5)
 
-        if carList[carName] ~= nil then
-            car.metadata.availability.yearFrom = carList[carName][1]
-            car.metadata.availability.yearTo = carList[carName][2]
+        if CARS[carName] ~= nil then
+            car.metadata.availability.yearFrom = CARS[carName][1]
+            car.metadata.availability.yearTo = CARS[carName][2]
         end
     end
 
     return car
 end
 
-function cims.changeBehaviour()
-    addModifier("loadModel", changeWardrobe)
-    addModifier("loadModel", changeCars)
+-- ================================================================== --
+
+function cims.tweakBehaviour()
+    addModifier("loadModel", overlapWardrobe)
+    addModifier("loadModel", overlapCars)
 end
 
 return cims

@@ -1,7 +1,9 @@
 local towns = {}
 -- ---------------------------------------------------------------------
 
-function towns.initTownChanges()
+-- TODO: general setting to halt growth
+
+function towns.tweakTowns()
     game.config.townMajorStreetAngleRange = 10
 end
 

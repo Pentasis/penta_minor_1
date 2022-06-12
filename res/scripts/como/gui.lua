@@ -1,6 +1,6 @@
 local gui = {}
 
-local function changeContourLines()
+local function improveContourLines()
     -- TODO: can we get rid of the 'whitewash'?
     game.config.gui.contourLinesConfig.contours = {
         { id = "majorContour", name = _("Major contour (100 m)"), color = { .05, .05, .05, .5 }, level = 100.0, width = 1.6, fadeDist = -1.0 },
@@ -10,17 +10,19 @@ local function changeContourLines()
     }
 end
 
-local function changeTerrainTools()
+-- ------------------------------------------------------------------ --
+
+local function improveTerrainTools()
     game.config.terrainToolMinStrength = 5
     game.config.terrainToolMaxStrength = 200
     game.config.terrainToolMaxSize     = 32
 end
 
--- ---------------------------------------------------------------------
+-- ================================================================== --
 
-function gui.initGui()
-    changeContourLines()
-    changeTerrainTools()
+function gui.tweakGUI()
+    improveContourLines()
+    improveTerrainTools()
 end
 
 return gui

@@ -95,7 +95,7 @@ function data()
             {
                 name = "street/street_light_eu_c.mdl",
                 offset = 8.0,
-                distance = 30.0,
+                distance = 16.0,
                 prob = 1.0,
                 offsetOrth = 3.0,
                 randRot = false,
@@ -107,7 +107,7 @@ function data()
             {
                 name = "street/street_asset_mix/fireplug_eu_c.mdl",
                 offset = 10.0,
-                distance = 50.0,
+                distance = 40.0,
                 prob = 0.5,
                 offsetOrth = 0.35,
                 randRot = false,

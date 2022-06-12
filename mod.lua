@@ -1,54 +1,54 @@
-local paramBuilder = require "parambuilder_v1_1"
+-- namespace = como
 
-local modTracks      = require "penta_minor/tracks"
-local modVehicles    = require "penta_minor/cargo_vehicles"
-local modIndustry    = require "penta_minor/industry"
-local modRoads       = require "penta_minor/streets"
-local modTowns       = require "penta_minor/towns"
-local modCims        = require "penta_minor/cims"
-local modTweaks      = require "penta_minor/tweaks"
-local modEnvironment = require "penta_minor/environment"
-local modGui         = require "penta_minor/gui"
+local modTracks = require "como/tracks"
+local modCargo = require "como/cargo"
+local modPassengers = require "como/cargo"
+local modVehicles = require "como/cargo"
+local modIndustry = require "como/industry"
+local modRoads = require "como/streets"
+local modTowns = require "como/towns"
+local modCims = require "como/cims"
+local modEnvironment = require "como/environment"
+local modGui = require "como/gui"
+local modTweaks = require "como/general"
 
--- ---------------------------------------------------------------------
-
---local paramTownDevelop = paramBuilder.Checkbox("penta_townDev", "Towns develop", true)
-
--- ---------------------------------------------------------------------
+-- ------------------------------------------------------------------ --
 
 function data()
-    return {
-        info    = {
-            name           = "Consolidated Mods",
-            description    = "My personal collection of changes and additions.",
-            authors        = {
-                {
-                    name = "Pentasis",
-                    role = 'CREATOR',
-                },
-            },
-            minorVersion   = 7,
-            severityAdd    = "WARNING",
-            severityRemove = "CRITICAL",
-            params         = {
-                --paramTownDevelop.params,
-            }
+  return {
+    info = {
+      name = "Consolidated Mods",
+      description = "My personal collection of changes and additions.",
+      authors = {
+        {
+          name = "Pentasis",
+          role = 'CREATOR',
         },
-        options = {},
-        runFn   = function(settings, modParams)
-            --math.randomseed(os.time())
-            local params = modParams[getCurrentModId()]
+      },
+      minorVersion = 7,
+      severityAdd = "WARNING",
+      severityRemove = "CRITICAL",
+      params = {
 
-            modTracks.initTrackChanges()
-            modVehicles.initCargoChanges()
-            modIndustry.initIndustry()
-            modRoads.initStreetChanges()
-            modTowns.initTownChanges() -- paramTownDevelop.getBool(params)
-            modCims.changeBehaviour()
-            modTweaks.initTweaks()
-            modEnvironment.initEnvironmentChanges()
-            modGui.initGui()
-        end
-        -- postRunFn = function (settings, params) ...
-    }
+      }
+    },
+    options = {},
+    runFn = function(settings, modParams)
+      --math.randomseed(os.time())
+      --local params = modParams[getCurrentModId()]
+
+      modTracks.tweakTracks()
+      modCargo.tweakCargo()
+      modPassengers.tweakPassengerSeats()
+      modVehicles.tweakVehicles()
+      modIndustry.tweakIndustry()
+      modRoads.tweakStreets()
+      modTowns.tweakTowns()
+      modCims.tweakBehaviour()
+      modEnvironment.tweakEnvironment()
+      modGui.tweakGUI()
+      modTweaks.tweakGeneral()
+    end
+    -- postRunFn = function (settings, params) ...
+  }
 end

@@ -14,11 +14,10 @@ local function dump(o)
     end
 end
 
-function tweaks.initTweaks()
+function tweaks.tweakGeneral()
     game.config.earnAchievementsWithMods = true
     game.config.industryButton           = true
     game.config.sandboxButton            = true
-
 end
 
 return tweaks

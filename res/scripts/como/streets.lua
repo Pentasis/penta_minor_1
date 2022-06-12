@@ -10,7 +10,9 @@ local function has_value(table, value)
     return false
 end
 
-local function doChanges(street)
+-- ------------------------------------------------------------------ --
+
+local function assignNewSlopes(street)
     -- Vanilla values are 20% (.2) for SlopeBuild & 0.75 for Embankment
     street.maxSlopeBuild       = 0.15
     street.maxSlope            = street.maxSlopeBuild * 1.4
@@ -21,27 +23,29 @@ local function doChanges(street)
     return street
 end
 
-local function changeStreetSlope(filename, street)
+-- ------------------------------------------------------------------ --
+
+local function adjustStreetSlope(filename, street)
     -- The vanilla streets do not define slope in config, so we assume modded ones do it themselves (hence we test on nil).
     -- TODO: clean this mess up, but combining conditional throws "not a table" error.
 
     if street.transportModesStreet ~= nil then
         if not has_value(street.transportModesStreet, "AIRCRAFT") and not has_value(street.transportModesStreet, "SHIP") then
             if street.maxSlopeBuild == nil then
-                street = doChanges(street)
+                street = assignNewSlopes(street)
             end
         end
     elseif street.maxSlopeBuild == nil then
-        street = doChanges(street)
+        street = assignNewSlopes(street)
     end
 
     return street
 end
 
--- ---------------------------------------------------------------------
+-- ================================================================== --
 
-function streets.initStreetChanges()
-    addModifier("loadStreet", changeStreetSlope)
+function streets.tweakStreets()
+    addModifier("loadStreet", adjustStreetSlope)
 end
 
 return streets

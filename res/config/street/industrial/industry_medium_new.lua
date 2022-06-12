@@ -99,11 +99,11 @@ function data()
             {
                 name = "street/street_light_eu_c.mdl",
                 offset = 10.0,
-                distance = 30.0,
+                distance = 20.0,
                 prob = 1.0,
                 offsetOrth = 3.4,
                 randRot = false,
-                oneSideOnly = false,
+                oneSideOnly = true,
                 alignToElevation = false,
                 avoidFaceEdges = false,
                 placeOnBridge = true,
@@ -111,7 +111,7 @@ function data()
             {
                 name = "street/street_asset_mix/fireplug_eu_c.mdl",
                 offset = 9.0,
-                distance = 50.0,
+                distance = 49.0,
                 prob = 0.5,
                 offsetOrth = 0.5,
                 randRot = false,

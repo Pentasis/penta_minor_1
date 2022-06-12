@@ -50,7 +50,9 @@ local function changeIndustry(filename, factory)
     return factory
 end
 
-function industry.initIndustry()
+-- ================================================================== --
+
+function industry.tweakIndustry()
     addModifier("loadConstruction", changeIndustry)
 end
 
