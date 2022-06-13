@@ -8,6 +8,7 @@ local function toggleTownDevelopment()
     end
 end
 
+-- TODO: combine all scripts in this folder into one.
 function data()
     return {
         update = function()

@@ -2,8 +2,7 @@
 
 local modTracks = require "como/tracks"
 local modCargo = require "como/cargo"
-local modPassengers = require "como/cargo"
-local modVehicles = require "como/cargo"
+local modVehicles = require "como/vehicles"
 local modIndustry = require "como/industry"
 local modRoads = require "como/streets"
 local modTowns = require "como/towns"
@@ -39,7 +38,6 @@ function data()
 
       modTracks.tweakTracks()
       modCargo.tweakCargo()
-      modPassengers.tweakPassengerSeats()
       modVehicles.tweakVehicles()
       modIndustry.tweakIndustry()
       modRoads.tweakStreets()
