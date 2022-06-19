@@ -35,6 +35,13 @@ function data()
           values = { "1 month", "2 months", "1 quarter", "half year", "1 year" },
           defaultIndex = 0,
         },
+        {
+          key = "como_grid",
+          name = "Town Layout",
+          uiType = "BUTTON",
+          values = { "Grid", "Less Grid", "No Grid" },
+          defaultIndex = 0,
+        },
       },
     },
     options = {},
@@ -47,7 +54,7 @@ function data()
       modVehicles.tweakVehicles(params.como_maintenance)
       modIndustry.tweakIndustry()
       modRoads.tweakStreets()
-      modTowns.tweakTowns()
+      modTowns.tweakTowns(params.como_grid)
       modCims.tweakBehaviour()
       modEnvironment.tweakEnvironment()
       modGui.tweakGUI()
