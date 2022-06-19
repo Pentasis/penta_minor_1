@@ -2,6 +2,7 @@ local vehicles = {}
 
 local cargo_data = require "como/data/cargo_data"
 
+local MAINTENANCE_INTERVALS = { 60, 120, 180, 365, 730 }
 -- ------------------------------------------------------------------ --
 
 local function passengerSeatAmount(seatProvider)
@@ -98,9 +99,9 @@ end
 
 -- ================================================================== --
 
-function vehicles.tweakVehicles()
+function vehicles.tweakVehicles(maintenance_interval)
   game.config.trainBrakeDeceleration = 1
-  game.config.chargeMaintenanceInterval = 180
+  game.config.chargeMaintenanceInterval = MAINTENANCE_INTERVALS[maintenance_interval + 1]
 
   addModifier("loadModel", makeAllTrainsReverse)
   addModifier("loadModel", noEndYear)

@@ -81,3 +81,4 @@ Not so much incompatible but they provide similar mechanics and are no longer ne
 ## My other mods
 - All Vanilla Assets (AVA); makes all models in the game placeable, including vehicles. Difference with other mods that do this: icons instead of cryptic names. WIP/Soon
 - Time of Day. Allows you to choose between morning, noon, dusk & night as well as clear, cloudy and overcast weather. WIP/Soon
+- Mountain generator. Terrain generator with higher mountains and wider rivers. WIP/Soon

@@ -28,17 +28,23 @@ function data()
       severityAdd = "WARNING",
       severityRemove = "CRITICAL",
       params = {
-
-      }
+        {
+          key = "como_maintenance",
+          name = "Maintenance interval",
+          uiType = "BUTTON",
+          values = { "1 month", "2 months", "1 quarter", "half year", "1 year" },
+          defaultIndex = 0,
+        },
+      },
     },
     options = {},
     runFn = function(settings, modParams)
       --math.randomseed(os.time())
-      --local params = modParams[getCurrentModId()]
+      local params = modParams[getCurrentModId()]
 
       modTracks.tweakTracks()
       modCargo.tweakCargo()
-      modVehicles.tweakVehicles()
+      modVehicles.tweakVehicles(params.como_maintenance)
       modIndustry.tweakIndustry()
       modRoads.tweakStreets()
       modTowns.tweakTowns()
