@@ -1,0 +1,764 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 37.20138168335, 4.3129162788391, 11.53429889679, },
+		bbMin = { -37.04275894165, -4.3129086494446, -2.083359003067, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 37.1220703125, 4.3129124641418, 6.808828830719, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, -1.7484555314695e-07, 0, 0, 1, 0, 0, 1.7484555314695e-07, 0, 1, 0, -28.001268386841, 1.6350531950593e-07, -8.0654409373437e-08, 1, },
+					},
+					{
+						children = {
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/herkules_xi_tanker/forever/locator.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+								mesh = "vehicle/ship/herkules_xi/locator_lod0.msh",
+								name = "locator",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.88842344284058, 1.9760364294052, 2.5763027667999, 1, },
+							},
+							{
+								materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+								mesh = "vehicle/ship/herkules_xi/ladder_lod0.msh",
+								name = "ladder",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5186309814453, 7.1525573730469e-07, -1.1829676628113, 1, },
+							},
+							{
+								materials = { "vehicle/ship/herkules_xi/herkules_xi_int.mtl", },
+								mesh = "vehicle/ship/herkules_xi/booth_int_lod0.msh",
+								name = "booth_int",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.072372436523438, 9.5367431640625e-07, 0.0062913768924773, 1, },
+							},
+							{
+								materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+								mesh = "vehicle/ship/herkules_xi/headlights_lod0.msh",
+								name = "headlights",
+								transf = { 1, 0, 1.7484555314695e-07, 0, 0, 1, 0, 0, -1.7484555314695e-07, 0, 1, 0, 2.0541207790375, 0.0002849995798897, 1.2537602186203, 1, },
+							},
+						},
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/booth_lod0.msh",
+						name = "booth",
+						transf = { 1, 0, -1.7484555314695e-07, 0, 0, 1, 0, 0, 1.7484555314695e-07, 0, 1, 0, -21.662366867065, 2.1382758859545e-05, 6.8239669799805, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_6_lod0.msh",
+						name = "lift_6",
+						transf = { 1, 5.3704742298164e-16, -1.7484555314695e-07, 0, -8.4720040349182e-24, 1, 3.0715530119352e-09, 0, 1.7484555314695e-07, -3.0715530119352e-09, 1, 0, -21.799999237061, -1.4131100177765, 3.0624196529388, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_5_lod0.msh",
+						name = "lift_5",
+						transf = { 1, -4.3544777972217e-15, -1.5099578831723e-07, 0, -2.718394957869e-24, 1, -2.8838403665077e-08, 0, 1.5099578831723e-07, 2.8838403665077e-08, 1, 0, -21.799999237061, 1.4131120443344, 3.0624239444733, 1, },
+					},
+					{
+						children = {
+							{
+								materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+								mesh = "vehicle/ship/herkules_xi/lift_2_lod0.msh",
+								name = "lift_2",
+								transf = { 1, -1.7366156512821e-08, -2.7463004315109e-08, 0, 1.7366154736465e-08, 1, -6.8575879197397e-08, 0, 2.7463004315109e-08, 6.8575879197397e-08, 1, 0, -1.9402958173487e-07, 1.3301198482513, 1.1097198724747, 1, },
+							},
+						},
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_4_lod0.msh",
+						name = "lift_4",
+						transf = { 1, 3.748694656422e-15, -1.5099578831723e-07, 0, -5.4894179821689e-24, 1, 2.4826487532437e-08, 0, 1.5099578831723e-07, -2.4826487532437e-08, 1, 0, -21.799798965454, -1.3321198225021, 0.7522799372673, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_3_lod0.msh",
+						name = "lift_3",
+						transf = { 1, 1.6118804052189e-15, -1.7484555314695e-07, 0, 2.9742150552536e-24, 1, 9.2188816580574e-09, 0, 1.7484555314695e-07, -9.2188816580574e-09, 1, 0, -21.799798965454, 1.3321223258972, 0.75228267908096, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_1_lod0.msh",
+						name = "lift_1",
+						transf = { 1, -1.5022436627987e-08, -1.7484555314695e-07, 0, 1.502243485163e-08, 1, -1.5931258090518e-08, 0, 1.7484555314695e-07, 1.5931256314161e-08, 1, 0, -21.799798965454, 1.7598006725311, 0.71921920776367, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/rudder_l_lod0.msh",
+						name = "rudder_l",
+						transf = { 1, 0, -1.7484555314695e-07, 0, 0, 1, 0, 0, 1.7484555314695e-07, 0, 1, 0, -35.373268127441, 2.2006793022156, -1.2331937551498, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/rudder_r_lod0.msh",
+						name = "rudder_r",
+						transf = { 1, 0, -1.7484555314695e-07, 0, 0, 1, 0, 0, 1.7484555314695e-07, 0, 1, 0, -35.373268127441, -2.176100730896, -1.2331937551498, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/screw_l_lod0.msh",
+						name = "screw_l",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, 0, 0, 0, 0, 1, 0, -34.526069641113, 2.1937828063965, -1.2057497501373, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/screw_r_lod0.msh",
+						name = "screw_r",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, 0, 0, 0, 0, 1, 0, -34.526069641113, -2.193977355957, -1.2057497501373, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_int.mtl", },
+						mesh = "vehicle/ship/herkules_xi/int_lod0.msh",
+						name = "int",
+						transf = { 1, 0, -1.7484555314695e-07, 0, 0, 1, 0, 0, 1.7484555314695e-07, 0, 1, 0, -28.001268386841, 2.1978805307299e-05, -8.0654409373437e-08, 1, },
+					},
+					{
+						materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+						mesh = "vehicle/ship/herkules_xi/brakelights_lod0.msh",
+						name = "brakelights",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.999799728394, 1.6350531950593e-07, -8.0654409373437e-08, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 29.450799942017, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/tanker_lod0.msh",
+						name = "tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 100,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/body_lod1.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -28.001268386841, 1.6350531950593e-07, -8.0654409373437e-08, 1, },
+					},
+					{
+						children = {
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/herkules_xi_tanker/forever/locator.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+								mesh = "vehicle/ship/herkules_xi/locator_lod1.msh",
+								name = "locator",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.88843017816544, 1.9760361909866, 2.5763030052185, 1, },
+							},
+							{
+								materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+								mesh = "vehicle/ship/herkules_xi/ladder_lod1.msh",
+								name = "ladder",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5186327695847, 7.1526039846503e-07, -1.182967543602, 1, },
+							},
+							{
+								materials = { "vehicle/ship/herkules_xi/herkules_xi_int.mtl", },
+								mesh = "vehicle/ship/herkules_xi/booth_int_lod1.msh",
+								name = "booth_int",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.072373047471046, 9.536789775666e-07, 0.0062915035523474, 1, },
+							},
+						},
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", "vehicle/ship/herkules_xi/herkules_xi.mtl", },
+						mesh = "vehicle/ship/herkules_xi/booth_lod1.msh",
+						name = "booth",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.662366867065, 2.1382758859545e-05, 6.8239669799805, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/lift_tanker_lod1.msh",
+						name = "lift_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.799999237061, -1.4131100177765, 3.0624196529388, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/rudder_l_lod1.msh",
+						name = "rudder_l",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -35.373268127441, 2.2006793022156, -1.2331937551498, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/rudder_r_lod1.msh",
+						name = "rudder_r",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -35.373268127441, -2.176100730896, -1.2331937551498, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/screw_l_lod1.msh",
+						name = "screw_l",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, -1.2325950468584e-31, 0, -1.2325950468584e-31, 0, 1, 0, -34.526069641113, 2.1937828063965, -1.2057497501373, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/screw_r_lod1.msh",
+						name = "screw_r",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, -1.2325950468584e-31, 0, -1.2325950468584e-31, 0, 1, 0, -34.526069641113, -2.193977355957, -1.2057497501373, 1, },
+					},
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_int.mtl", },
+						mesh = "vehicle/ship/herkules_xi/int_lod1.msh",
+						name = "int",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -28.001268386841, 2.1978805307299e-05, -8.0654409373437e-08, 1, },
+					},
+					{
+						materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+						mesh = "vehicle/ship/herkules_xi/brakelights_tanker_lod1.msh",
+						name = "brakelights_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.999799728394, 1.6350531950593e-07, -8.0654409373437e-08, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod1.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod1.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 29.450799942017, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/tanker_lod1.msh",
+						name = "tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 100,
+			visibleTo = 400,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/herkules_xi/herkules_xi_transparent.mtl", },
+						mesh = "vehicle/ship/herkules_xi/body_tanker_lod2.msh",
+						name = "body_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -28.001268386841, 1.6350531950593e-07, -8.0654409373437e-08, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod2.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/body_lod2.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 29.450799942017, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", },
+						mesh = "vehicle/ship/barge_small_tanker/tanker_lod2.msh",
+						name = "tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6802003383636, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 400,
+			visibleTo = 1600,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1990,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+		description = {
+			description = "One barge for liquids and the other for solid goods",
+			name = "Hercules XI Combi Towboat",
+		},
+		emission = {
+			idleEmission = -1,
+			powerEmission = -1,
+			speedEmission = -1,
+		},
+		maintenance = {
+			lifespan = 36525,
+			runningCosts = -1,
+		},
+		particleSystem = {
+			emitters = {
+				{
+					child = 1,
+					color = { 0.2, 0.2, 0.25, },
+					frequency = 60,
+					initialAlpha = 0.25,
+					lifeTime = 1.5,
+					position = { -5.1047806739807, 2.4792215824127, 3.5877718925476, },
+					size01 = { 0.2, 1.5, },
+					velocity = { -0.8, 0, 2, },
+				},
+				{
+					child = 1,
+					color = { 0.2, 0.2, 0.25, },
+					frequency = 60,
+					initialAlpha = 0.25,
+					lifeTime = 1.5,
+					position = { -5.1047806739807, -2.479199886322, 3.5877718925476, },
+					size01 = { 0.2, 1.5, },
+					velocity = { -0.8, 0, 2, },
+				},
+			},
+		},
+		seatProvider = {
+			crewModels = { },
+			drivingLicense = "WATER",
+			seats = {
+				{
+					animation = "idle",
+					crew = true,
+					forward = true,
+					group = 2,
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.46236896514893, -0.065021380782127, -1.1639673709869, 1, },
+				},
+				{
+					animation = "sitting",
+					crew = true,
+					forward = true,
+					group = 2,
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1173689737916, -0.9099999666214, -1.1389673948288, 1, },
+				},
+			},
+		},
+		soundConfig = {
+			effects = { },
+			soundSet = {
+				horn = "",
+				name = "ship_diesel_modern",
+			},
+		},
+		transportVehicle = {
+			carrier = "WATER",
+			compartmentsList = {
+				{
+					loadConfigs = {
+						{
+							cargoEntries = {
+								{
+									capacity = 700,
+									seats = { },
+									type = "CRUDE",
+								},
+							},
+							toHide = { },
+						},
+						{
+							cargoEntries = {
+								{
+									capacity = 700,
+									seats = { },
+									type = "OIL",
+								},
+							},
+							toHide = { },
+						},
+						{
+							cargoEntries = {
+								{
+									capacity = 700,
+									seats = { },
+									type = "FUEL",
+								},
+							},
+							toHide = { },
+						},
+					},
+				},
+				{
+					loadConfigs = {
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "LOGS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 2, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "COAL",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 2, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "IRON_ORE",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 2, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "STONE",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 2, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "GRAIN",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "STEEL",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "PLANKS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "PLASTIC",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "CONSTRUCTION_MATERIALS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "MACHINES",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "TOOLS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "FOOD",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 600,
+          									cargoBay = {
+          										bbMax = { 59.719303131104, 2.992399930954, 3.5, },
+          										bbMin = { 41.293598175049, -2.992399930954, 1, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 2, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "GOODS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          					},
+				},
+			},
+			groupFileName = "",
+			loadSpeed = 100,
+			multipleUnitOnly = false,
+			reversible = false,
+		},
+		waterVehicle = {
+			area = 11,
+			availPower = 1600000,
+			configs = {
+				{
+					flags = {
+						ids = { },
+						maxAngle = 0,
+					},
+					paddles = {
+						ids = { 15, 16, },
+						maxAngle = 0,
+					},
+					rudder = {
+						ids = { 13, 14, },
+						maxAngle = 30,
+					},
+				},
+				{
+					flags = {
+						ids = { },
+						maxAngle = 0,
+					},
+					paddles = {
+						ids = { 9, 10, },
+						maxAngle = 0,
+					},
+					rudder = {
+						ids = { 7, 8, },
+						maxAngle = 30,
+					},
+				},
+			},
+			maxRpm = 400,
+			topSpeed = 7.77777777778,
+			type = "BIG",
+			waterLine = {
+				{ 36.70410, 0.00000, 0.00000 }, 
+				{ 36.70410, 3.00000, 0.00000 }, 
+				{ 36.66199, 3.36000, 0.00000 }, 
+				{ 36.53574, 3.64000, 0.00000 }, 
+				{ 36.32553, 3.84000, 0.00000 }, 
+				{ 36.03172, 3.96000, 0.00000 }, 
+				{ 35.65477, 4.00000, 0.00000 }, 
+				{ 10.62881, 4.00000, 0.00000 }, 
+				{ 10.27515, 3.96000, 0.00000 }, 
+				{ 9.99975, 3.84000, 0.00000 }, 
+				{ 9.80287, 3.64000, 0.00000 }, 
+				{ 9.68467, 3.36000, 0.00000 }, 
+				{ 9.64525, 3.00000, 0.00000 }, 
+				{ 9.64525, 2.39085, 0.00000 }, 
+				{ 8.93560, 2.40000, 0.00000 }, 
+				{ 8.93351, 3.00000, 0.00000 }, 
+				{ 8.89140, 3.36000, 0.00000 }, 
+				{ 8.76514, 3.64000, 0.00000 }, 
+				{ 8.55494, 3.84000, 0.00000 }, 
+				{ 8.26113, 3.96000, 0.00000 }, 
+				{ 7.88417, 4.00000, 0.00000 }, 
+				{ -17.14178, 4.00000, 0.00000 }, 
+				{ -17.49545, 3.96000, 0.00000 }, 
+				{ -17.77084, 3.84000, 0.00000 }, 
+				{ -17.96773, 3.64000, 0.00000 }, 
+				{ -18.08593, 3.36000, 0.00000 }, 
+				{ -18.12535, 3.00000, 0.00000 }, 
+				{ -18.12535, 2.39085, 0.00000 }, 
+				{ -18.49000, 2.38500, 0.00000 }, 
+				{ -18.49004, 3.51100, 0.00000 }, 
+				{ -18.52609, 3.72756, 0.00000 }, 
+				{ -18.63426, 3.88225, 0.00000 }, 
+				{ -18.81454, 3.97507, 0.00000 }, 
+				{ -19.21404, 4.00945, 0.00000 }, 
+				{ -22.79450, 4.29882, 0.00000 }, 
+				{ -33.19079, 4.31292, 0.00000 },
+				{ -36.46447, 4.29882, 0.00000 }, 
+				{ -36.71262, 4.26948, 0.00000 }, 
+				{ -36.88649, 4.17246, 0.00000 }, 
+				{ -36.99061, 4.01044, 0.00000 }, 
+				{ -37.02206, 3.77923, 0.00000 }, 
+				{ -37.02234, 1.32978, 0.00000 }, 
+				{ -36.71434, 1.32691, 0.00000 }, 
+				{ -36.71482, 0.00001, 0.00000 },
+			},
+			weight = 1157000,
+		},
+	},
+	version = 1,
+}
+end

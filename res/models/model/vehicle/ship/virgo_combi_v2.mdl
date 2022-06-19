@@ -1,0 +1,765 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 37.803886413574, 5.9777002334595, 10.077201843262, },
+		bbMin = { -37.75, -5.9776949882507, -2.2263283729553, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 37.776943206787, 5.9776973724365, 6.1517648696899, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", "vehicle/ship/virgo/virgo_transparent.mtl", },
+						mesh = "vehicle/ship/virgo/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						children = {
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/virgo_tanker/forever/locator_tanker.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/virgo/virgo.mtl", },
+								mesh = "vehicle/ship/virgo/locator_tanker_lod0.msh",
+								name = "locator_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.3029050827026, 4.7683715820313e-07, 3.185201883316, 1, },
+							},
+							{
+								materials = { "vehicle/ship/virgo/virgo.mtl", },
+								mesh = "vehicle/ship/virgo/ladder_02_tanker_lod0.msh",
+								name = "ladder_02_tanker",
+								transf = { 0.84859186410904, 1.5985142098884e-09, 0.52904808521271, 0, -1.3410175192519e-09, 1, -8.7050228136931e-10, 0, -0.52904808521271, 2.9238403365106e-11, 0.84859186410904, 0, -1.2173451185226, 1.5357290506363, 0.29306614398956, 1, },
+							},
+							{
+								materials = { "vehicle/ship/virgo/virgo_int.mtl", },
+								mesh = "vehicle/ship/virgo/booth_int_tanker_lod0.msh",
+								name = "booth_int_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.02210807800293, 1, },
+							},
+							{
+								materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+								mesh = "vehicle/ship/virgo/headlights_tanker_lod0.msh",
+								name = "headlights_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.3633451461792, 4.7683715820313e-07, -3.0969338417053, 1, },
+							},
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/virgo_tanker/forever/blinker_tanker.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+								mesh = "vehicle/ship/virgo/blinker_tanker_lod0.msh",
+								name = "blinker_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.039137840271, 1.7652590274811, 2.960280418396, 1, },
+							},
+						},
+						materials = { "vehicle/ship/virgo/virgo_transparent.mtl", "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/booth_tanker_lod0.msh",
+						name = "booth_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.386653900146, -4.7683715820313e-07, 6.0369334220886, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/lift_tanker_lod0.msh",
+						name = "lift_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.367774963379, -4.7683715820313e-07, 2.8971493244171, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/ladder_01_tanker_lod0.msh",
+						name = "ladder_01_tanker",
+						transf = { 0.84859186410904, -1.5985142098884e-09, 0.52904808521271, 0, 1.3410175192519e-09, 1, 8.7050228136931e-10, 0, -0.52904808521271, -2.9238403365106e-11, 0.84859186410904, 0, -27.206003189087, 1.5357285737991, 3.2215931415558, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/rudder_l_tanker_lod0.msh",
+						name = "rudder_l_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -36.825126647949, 2.2500023841858, -1.509113907814, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/rudder_r_tanker_lod0.msh",
+						name = "rudder_r_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -36.825126647949, -2.2499995231628, -1.509113907814, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/screw_l_tanker_lod0.msh",
+						name = "screw_l_tanker",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, -1.2325950468584e-31, 0, -1.2325950468584e-31, 0, 1, 0, -36.746376037598, 2.2479133605957, -1.6092023849487, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/screw_r_tanker_lod0.msh",
+						name = "screw_r_tanker",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, -1.2325950468584e-31, 0, -1.2325950468584e-31, 0, 1, 0, -36.746376037598, -2.2479104995728, -1.6092023849487, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo_int.mtl", },
+						mesh = "vehicle/ship/virgo/int_tanker_lod0.msh",
+						name = "int_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+						mesh = "vehicle/ship/virgo/headlights_body_tanker_lod0.msh",
+						name = "headlights_body_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.2999992370605, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod0.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.053302764893, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 100,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/virgo/virgo_int.mtl", },
+						mesh = "vehicle/ship/virgo/int_tanker_lod1.msh",
+						name = "int_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						children = {
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/virgo_tanker/forever/locator_tanker.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/virgo/virgo.mtl", },
+								mesh = "vehicle/ship/virgo/locator_tanker_lod1.msh",
+								name = "locator_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.3029100894928, 4.7683715820313e-07, 3.1852025985718, 1, },
+							},
+							{
+								materials = { "vehicle/ship/virgo/virgo.mtl", },
+								mesh = "vehicle/ship/virgo/ladder_02_tanker_lod1.msh",
+								name = "ladder_02_tanker",
+								transf = { 0.94088071584702, 0, 0.33873790502548, 0, 0, 1, 0, 0, -0.33873790502548, 0, 0.94088071584702, 0, -1.2173461914063, 1.5357290506363, 0.29306641221046, 1, },
+							},
+							{
+								materials = { "vehicle/ship/virgo/virgo_int.mtl", },
+								mesh = "vehicle/ship/virgo/booth_int_tanker_lod1.msh",
+								name = "booth_int_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.022108459845185, 1, },
+							},
+							{
+								materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+								mesh = "vehicle/ship/virgo/headlights_tanker_lod1.msh",
+								name = "headlights_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.363347530365, 4.7683715820313e-07, -3.0969338417053, 1, },
+							},
+							{
+								animations = {
+									forever = {
+										params = {
+											id = "vehicle/ship/virgo_tanker/forever/blinker_tanker.ani",
+										},
+										type = "FILE_REF",
+									},
+								},
+								materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+								mesh = "vehicle/ship/virgo/blinker_tanker_lod1.msh",
+								name = "blinker_tanker",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.0391407012939, 1.7652590274811, 2.960280418396, 1, },
+							},
+						},
+						materials = { "vehicle/ship/virgo/virgo_transparent.mtl", "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/booth_tanker_lod1.msh",
+						name = "booth_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.386651992798, 0, 6.0369334220886, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/lift_tanker_lod1.msh",
+						name = "lift_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.367774963379, -4.7683715820313e-07, 1.9271492958069, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/ladder_01_tanker_lod1.msh",
+						name = "ladder_01_tanker",
+						transf = { 0.94088071584702, 0, 0.33873790502548, 0, 0, 1, 0, 0, -0.33873790502548, 0, 0.94088071584702, 0, -27.206003189087, 1.5357285737991, 3.2215931415558, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/rudder_l_tanker_lod1.msh",
+						name = "rudder_l_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -36.825126647949, 2.2500023841858, -1.509113907814, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/rudder_r_tanker_lod1.msh",
+						name = "rudder_r_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -36.825126647949, -2.2499995231628, -1.509113907814, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/screw_l_tanker_lod1.msh",
+						name = "screw_l_tanker",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, 0, 0, 0, 0, 1, 0, -36.746376037598, 2.2479133605957, -1.6092023849487, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/screw_r_tanker_lod1.msh",
+						name = "screw_r_tanker",
+						transf = { 6.1232342629258e-17, 1, 0, 0, -1, 6.1232342629258e-17, 0, 0, 0, 0, 1, 0, -36.746376037598, -2.2479104995728, -1.6092023849487, 1, },
+					},
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", "vehicle/ship/virgo/virgo_transparent.mtl", },
+						mesh = "vehicle/ship/virgo/body_tanker_lod1.msh",
+						name = "body_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/emissive/ship_all_lights.mtl", },
+						mesh = "vehicle/ship/virgo/headlights_body_tanker_lod1.msh",
+						name = "headlights_body_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod1.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.2999992370605, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod1.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.053302764893, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/tanker_lod1.msh",
+						name = "tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.2999992370605, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 100,
+			visibleTo = 400,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "vehicle/ship/virgo/virgo.mtl", },
+						mesh = "vehicle/ship/virgo/body_tanker_lod2.msh",
+						name = "body_tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -27.75, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod2.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.2999992370605, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", "vehicle/ship/barges_body.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/body_lod2.msh",
+						name = "body",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.053302764893, 0, 0, 1, },
+					},
+					{
+						materials = { "vehicle/ship/barges_details.mtl", },
+						mesh = "vehicle/ship/barge_big_tanker/tanker_lod2.msh",
+						name = "tanker",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.2999992370605, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 400,
+			visibleTo = 1600,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 2013,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+		description = {
+			description = "One barge for liquids and the other for solid goods",
+			name = "Virgo Combi Towboat",
+		},
+		emission = {
+			idleEmission = -1,
+			powerEmission = -1,
+			speedEmission = -1,
+		},
+		maintenance = {
+			lifespan = 36525,
+			runningCosts = -1,
+		},
+		particleSystem = {
+			emitters = {
+				{
+					child = 1,
+					color = { 0.3, 0.3, 0.35, },
+					frequency = 60,
+					initialAlpha = 0.25,
+					lifeTime = 2,
+					position = { -4.1149997711182, 3.3290364742279, 3.8672020435333, },
+					size01 = { 0.2, 2, },
+					velocity = { -2, 0, 0.5, },
+					velocityDampingFactor = 2.5,
+				},
+				{
+					child = 1,
+					color = { 0.3, 0.3, 0.35, },
+					frequency = 60,
+					initialAlpha = 0.25,
+					lifeTime = 2,
+					position = { -4.1149997711182, -3.3290350437164, 3.8672020435333, },
+					size01 = { 0.2, 2, },
+					velocity = { -2, 0, 0.5, },
+					velocityDampingFactor = 2.5,
+				},
+			},
+		},
+		seatProvider = {
+			crewModels = { },
+			drivingLicense = "BUS",
+			seats = {
+				{
+					animation = "driving_upright",
+					crew = true,
+					forward = true,
+					group = 2,
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.35165485739708, -0.024000000208616, 0.052066158503294, 1, },
+				},
+			},
+		},
+		soundConfig = {
+			effects = { },
+			soundSet = {
+				horn = "",
+				name = "ship_diesel_modern",
+			},
+		},
+		transportVehicle = {
+			carrier = "WATER",
+			compartmentsList = {
+				{
+					loadConfigs = {
+						{
+							cargoEntries = {
+								{
+									capacity = 750,
+									seats = { },
+									type = "CRUDE",
+								},
+							},
+							toHide = { },
+						},
+						{
+							cargoEntries = {
+								{
+									capacity = 750,
+									seats = { },
+									type = "OIL",
+								},
+							},
+							toHide = { },
+						},
+						{
+							cargoEntries = {
+								{
+									capacity = 750,
+									seats = { },
+									type = "FUEL",
+								},
+							},
+							toHide = { },
+						},
+					},
+				},
+				{
+					loadConfigs = {
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "LOGS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 1.7000000476837, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 1, },
+          										cargoFormat = "MEDIUM4x1",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "COAL",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 1.7000000476837, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 1, },
+          										cargoFormat = "MEDIUM4x1",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "IRON_ORE",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 1.7000000476837, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 1, },
+          										cargoFormat = "MEDIUM4x1",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "STONE",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 1.7000000476837, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 1, },
+          										cargoFormat = "MEDIUM4x1",
+          										childId = 1,
+          										gridSize = { },
+          										sizePolicy = "STRETCH",
+          										type = "LEVEL",
+          									},
+          									seats = { },
+          									type = "GRAIN",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "STEEL",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "PLANKS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "PLASTIC",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "CONSTRUCTION_MATERIALS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "MACHINES",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "TOOLS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "FOOD",
+          								},
+          							},
+          							toHide = { },
+          						},
+          						{
+          							cargoEntries = {
+          								{
+          									capacity = 650,
+          									cargoBay = {
+          										bbMax = { 60.072002410889, 4.9700999259949, 3.5, },
+          										bbMin = { 41.645900726318, -4.9700999259949, 0.5, },
+          										cargoFormat = "BIG",
+          										childId = 1,
+          										gridSize = { 3, 4, },
+          										sizePolicy = "STRETCH_HEIGHT_SCALEY",
+          										type = "DISCRETE",
+          									},
+          									seats = { },
+          									type = "GOODS",
+          								},
+          							},
+          							toHide = { },
+          						},
+          					},
+				},
+			},
+			loadSpeed = 100,
+			multipleUnitOnly = false,
+			reversible = false,
+		},
+		waterVehicle = {
+			area = 11,
+			availPower = 3000000,
+			configs = {
+				{
+					flags = {
+						ids = { },
+						maxAngle = 0,
+					},
+					paddles = {
+						ids = { 12, 13, },
+						maxAngle = 0,
+					},
+					rudder = {
+						ids = { 10, 11, },
+						maxAngle = 30,
+					},
+				},
+				{
+					flags = {
+						ids = { },
+						maxAngle = 0,
+					},
+					paddles = {
+						ids = { 12, 13, },
+						maxAngle = 0,
+					},
+					rudder = {
+						ids = { 10, 11, },
+						maxAngle = 30,
+					},
+				},
+			},
+			maxRpm = 200,
+			topSpeed = 8.33333333333,
+			type = "BIG",
+			waterLine = {
+				{ 37.307399749756, 0, },
+				{ 37.307399749756, 4.9777002334595, },
+				{ 37.265289306641, 5.3376998901367, },
+				{ 37.139041900635, 5.6177000999451, },
+				{ 36.928829193115, 5.8176999092102, },
+				{ 36.635021209717, 5.9376997947693, },
+				{ 36.258060455322, 5.9777002334595, },
+				{ 11.232099533081, 5.9777002334595, },
+				{ 10.878439903259, 5.9376997947693, },
+				{ 10.603050231934, 5.8176999092102, },
+				{ 10.406160354614, 5.6177000999451, },
+				{ 10.28796005249, 5.3376998901367, },
+				{ 10.248539924622, 4.9777002334595, },
+				{ 10.248880386353, 2.3932299613953, },
+				{ 9.5501403808594, 2.4009299278259, },
+				{ 9.5501403808594, 4.9777002334595, },
+				{ 9.5080299377441, 5.3376998901367, },
+				{ 9.3817796707153, 5.6177000999451, },
+				{ 9.1715698242188, 5.8176999092102, },
+				{ 8.8777599334717, 5.9376997947693, },
+				{ 8.5008001327515, 5.9777002334595, },
+				{ -16.525150299072, 5.9777002334595, },
+				{ -16.878820419312, 5.9376997947693, },
+				{ -17.154209136963, 5.8176999092102, },
+				{ -17.351089477539, 5.6177000999451, },
+				{ -17.469299316406, 5.3376998901367, },
+				{ -17.508720397949, 4.9777002334595, },
+				{ -17.508369445801, 2.3870000839233, },
+				{ -17.753370285034, 2.3946900367737, },
+				{ -17.753370285034, 4.5, },
+				{ -17.785930633545, 4.71875, },
+				{ -17.883310317993, 4.875, },
+				{ -18.044580459595, 4.96875, },
+				{ -18.268230438232, 5, },
+				{ -28.987300872803, 5.0135297775269, },
+				{ -37.253368377686, 5, },
+				{ -37.472118377686, 4.96875, },
+				{ -37.628368377686, 4.875, },
+				{ -37.722118377686, 4.71875, },
+				{ -37.753368377686, 4.5, },
+				{ -37.753368377686, 1.0968199968338, },
+				{ -37.258171081543, 1.0973700284958, },
+				{ -37.257740020752, 0, },
+			},
+			weight = 1154000,
+		},
+	},
+	version = 1,
+}
+end

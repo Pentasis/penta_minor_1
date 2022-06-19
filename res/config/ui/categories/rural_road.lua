@@ -1,6 +1,6 @@
 function data()
-    return {
-        name = _("Rural Roads"),
-        order = 1,
-    }
+  return {
+    name = _("Rural Roads"),
+    order = 1,
+  }
 end

@@ -2,9 +2,9 @@ local bridgeutil = require "bridgeutil"
 
 function data()
 
-  local dir               = "bridge/iron/"
+  local dir = "bridge/iron/"
 
-  local config            = {
+  local config = {
     pillarBase = { dir .. "pillar_btm_side.mdl", dir .. "pillar_btm_rep.mdl", dir .. "pillar_btm_side2.mdl" },
     pillarRepeat = { dir .. "pillar_rep_side.mdl", dir .. "pillar_rep_rep.mdl", dir .. "pillar_rep_side2.mdl" },
     pillarTop = { dir .. "pillar_top_side.mdl", dir .. "pillar_top_rep.mdl", dir .. "pillar_top_side2.mdl" },

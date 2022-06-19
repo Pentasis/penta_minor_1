@@ -1,25 +1,25 @@
 local tracks = {}
 
 local function addVanillaCategory(filename, track)
-    if filename == "res/config/track/standard.lua" then
-        track.categories = { "wooden_tracks" }
-        track.desc = "Standard wooden tracks with max speed of 120 km/h"
-    elseif filename == "res/config/track/high_speed.lua" then
-        track.categories = { "concrete_tracks" }
-        track.desc = "High-speed concrete tracks with max speed of 300 km/h"
-    end
+  if filename == "res/config/track/standard.lua" then
+    track.categories = { "wooden_tracks" }
+    track.desc = "Standard wooden tracks with max speed of 120 km/h"
+  elseif filename == "res/config/track/high_speed.lua" then
+    track.categories = { "concrete_tracks" }
+    track.desc = "High-speed concrete tracks with max speed of 300 km/h"
+  end
 
-    return track
+  return track
 end
 
 -- ------------------------------------------------------------------ --
 
 local function changeCrossingDelay(filename, crossing)
-    if crossing.trafficDelay ~= nil and crossing.trafficDelay < 4000 then
-        crossing.trafficDelay = 4000
-    end
+  if crossing.trafficDelay ~= nil and crossing.trafficDelay < 4000 then
+    crossing.trafficDelay = 4000
+  end
 
-    return crossing
+  return crossing
 end
 
 -- ------------------------------------------------------------------ --
@@ -37,10 +37,10 @@ end
 -- ---------------------------------------------------------------------
 
 function tracks.tweakTracks()
-    addModifier("loadTrack", addVanillaCategory)
-    addModifier("loadRailroadCrossing", changeCrossingDelay)
-    -- TODO Add signal distance
-    -- addModifier("loadModel", changeSignalDistance)
+  addModifier("loadTrack", addVanillaCategory)
+  addModifier("loadRailroadCrossing", changeCrossingDelay)
+  -- TODO Add signal distance
+  -- addModifier("loadModel", changeSignalDistance)
 end
 
 return tracks

@@ -2,78 +2,78 @@ local bridgeutil = require "bridgeutil"
 
 function data()
 
-    local dir = "bridge/iron_rusty/"
+  local dir = "bridge/iron_rusty/"
 
-    local config = {
-        pillarBase = { dir .. "pillar_btm_side.mdl", dir .. "pillar_btm_rep.mdl", dir .. "pillar_btm_side2.mdl" },
-        pillarRepeat = { dir .. "pillar_rep_side.mdl", dir .. "pillar_rep_rep.mdl", dir .. "pillar_rep_side2.mdl" },
-        pillarTop = { dir .. "pillar_top_side.mdl", dir .. "pillar_top_rep.mdl", dir .. "pillar_top_side2.mdl" },
+  local config = {
+    pillarBase = { dir .. "pillar_btm_side.mdl", dir .. "pillar_btm_rep.mdl", dir .. "pillar_btm_side2.mdl" },
+    pillarRepeat = { dir .. "pillar_rep_side.mdl", dir .. "pillar_rep_rep.mdl", dir .. "pillar_rep_side2.mdl" },
+    pillarTop = { dir .. "pillar_top_side.mdl", dir .. "pillar_top_rep.mdl", dir .. "pillar_top_side2.mdl" },
 
-        railingBegin = {
-            dir .. "railing_start_side.mdl", dir .. "railing_start_side.mdl", dir .. "railing_start_side_no_side.mdl",
-            dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
-            dir .. "railing_end_side2.mdl", dir .. "railing_end_side2.mdl", dir .. "railing_end_side2_no_side.mdl",
-        },
-        railingRepeat = {
-            dir .. "railing_rep_side.mdl", dir .. "railing_rep_side.mdl", dir .. "railing_rep_side_no_side.mdl",
-            dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
-            dir .. "railing_rep_side2.mdl", dir .. "railing_rep_side2.mdl", dir .. "railing_rep_side2_no_side.mdl",
-        },
-        railingEnd = {
-            dir .. "railing_end_side.mdl", dir .. "railing_end_side.mdl", dir .. "railing_end_side_no_side.mdl",
-            dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
-            dir .. "railing_start_side2.mdl", dir .. "railing_start_side2.mdl", dir .. "railing_start_side2_no_side.mdl",
-        },
+    railingBegin = {
+      dir .. "railing_start_side.mdl", dir .. "railing_start_side.mdl", dir .. "railing_start_side_no_side.mdl",
+      dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
+      dir .. "railing_end_side2.mdl", dir .. "railing_end_side2.mdl", dir .. "railing_end_side2_no_side.mdl",
+    },
+    railingRepeat = {
+      dir .. "railing_rep_side.mdl", dir .. "railing_rep_side.mdl", dir .. "railing_rep_side_no_side.mdl",
+      dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
+      dir .. "railing_rep_side2.mdl", dir .. "railing_rep_side2.mdl", dir .. "railing_rep_side2_no_side.mdl",
+    },
+    railingEnd = {
+      dir .. "railing_end_side.mdl", dir .. "railing_end_side.mdl", dir .. "railing_end_side_no_side.mdl",
+      dir .. "railing_rep_rep.mdl", dir .. "railing_rep_rep.mdl",
+      dir .. "railing_start_side2.mdl", dir .. "railing_start_side2.mdl", dir .. "railing_start_side2_no_side.mdl",
+    },
+  }
+
+  config.configureRailing = function(modelData, params, interval, i, length, width)
+    local railingModels = {
+      (interval.hasPillar[1] >= 0 or i == 1) and config.railingBegin or {}, config.railingRepeat,
+      (interval.hasPillar[2] >= 0 or i == #params.railingIntervals) and config.railingEnd or {}
     }
 
-    config.configureRailing = function(modelData, params, interval, i, length, width)
-        local railingModels = {
-            (interval.hasPillar[1] >= 0 or i == 1) and config.railingBegin or {}, config.railingRepeat,
-            (interval.hasPillar[2] >= 0 or i == #params.railingIntervals) and config.railingEnd or {}
-        }
+    return bridgeutil.configureRailing(modelData, interval, railingModels, length, width)
+  end
 
-        return bridgeutil.configureRailing(modelData, interval, railingModels, length, width)
-    end
+  return {
 
-    return {
+    name = _("Iron bridge"),
 
-        name = _("Iron bridge"),
+    yearFrom = 1910,
+    yearTo = 0,
 
-        yearFrom = 1910,
-        yearTo = 0,
+    carriers = { "RAIL", "ROAD", "TRAM" },
 
-        carriers = { "RAIL", "ROAD", "TRAM" },
+    speedLimit = 90.0 / 3.6,
 
-        speedLimit = 90.0 / 3.6,
+    pillarLen = 3,
 
-        pillarLen = 3,
+    pillarMinDist = 18.0 * 2,
+    pillarMaxDist = 66.0,
+    pillarTargetDist = 36.0,
 
-        pillarMinDist = 18.0 * 2,
-        pillarMaxDist = 66.0,
-        pillarTargetDist = 36.0,
+    cost = 150.0,
+    costFactors = { 10.0, 2.0, 1.0 },
 
-        cost = 150.0,
-        costFactors = { 10.0, 2.0, 1.0 },
+    materialsToReplace = {
+      streetPaving = {
+        name = "street/country_new_medium_paving.mtl",
+      },
+      streetLane = {
+        name = "street/new_medium_lane.mtl",
+      },
+      crossingLane = {
+        name = "street/new_medium_lane.mtl",
+      },
+      sidewalkPaving = {
+        name = "street/new_medium_sidewalk.mtl",
+      },
+      sidewalkBorderInner = {
+        name = "street/new_medium_sidewalk_border_inner.mtl",
+        size = { 3, 0.6 }
+      },
+    },
 
-        materialsToReplace = {
-            streetPaving = {
-                name = "street/country_new_medium_paving.mtl",
-            },
-            streetLane = {
-                name = "street/new_medium_lane.mtl",
-            },
-            crossingLane = {
-                name = "street/new_medium_lane.mtl",
-            },
-            sidewalkPaving = {
-                name = "street/new_medium_sidewalk.mtl",
-            },
-            sidewalkBorderInner = {
-                name = "street/new_medium_sidewalk_border_inner.mtl",
-                size = { 3, 0.6 }
-            },
-        },
-
-        updateFn = bridgeutil.makeDefaultUpdateFn(config),
-    }
+    updateFn = bridgeutil.makeDefaultUpdateFn(config),
+  }
 end
