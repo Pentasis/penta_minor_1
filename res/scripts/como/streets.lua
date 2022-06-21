@@ -1,14 +1,6 @@
 local streets = {}
 
-local function has_value(table, value)
-  for _, v in pairs(table) do
-    if v == value then
-      return true
-    end
-  end
-
-  return false
-end
+local helper = require "pentasis/helper_functions"
 
 -- ------------------------------------------------------------------ --
 
@@ -30,7 +22,8 @@ local function adjustStreetSlope(filename, street)
   -- TODO: clean this mess up, but combining conditional throws "not a table" error.
 
   if street.transportModesStreet ~= nil then
-    if not has_value(street.transportModesStreet, "AIRCRAFT") and not has_value(street.transportModesStreet, "SHIP") then
+    if not helper.hasValue(street.transportModesStreet, "AIRCRAFT") and
+     not helper.hasValue(street.transportModesStreet, "SHIP") then
       if street.maxSlopeBuild == nil then
         street = assignNewSlopes(street)
       end

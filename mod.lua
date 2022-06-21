@@ -42,11 +42,17 @@ function data()
           values = { "Grid", "Less Grid", "No Grid" },
           defaultIndex = 0,
         },
+        {
+          key = "como_towndev",
+          name = "Town Development",
+          uiType = "BUTTON",
+          values = { "On", "Off" },
+          defaultIndex = 0,
+        },
       },
     },
     options = {},
     runFn = function(settings, modParams)
-      --math.randomseed(os.time())
       local params = modParams[getCurrentModId()]
 
       modTracks.tweakTracks()
@@ -59,7 +65,9 @@ function data()
       modEnvironment.tweakEnvironment()
       modGui.tweakGUI()
       modTweaks.tweakGeneral()
+    end,
+    postRunFn = function(settings, modParams)
+
     end
-    -- postRunFn = function (settings, params) ...
   }
 end

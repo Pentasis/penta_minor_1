@@ -1,19 +1,22 @@
-local isGamePaused = false
+local helper = require "pentasis/helper_functions"
 
---local function toggleTownDevelopment()
---  -- TODO: Add checkbox to townwindow and do this on a per town basis.
---  local towns = game.interface.getTowns()
---  for _, id in pairs(towns) do
---    game.interface.setTownDevelopmentActive(id, true)
---  end
---end
+local isFirstRun = true
 
--- TODO: Do I really need to check if game ~= nil?
+local function toggleTownDevelopment()
+  --local isActive = true
+  -- TODO: How do I read a param in this file?
+  --if town_dev == 1 then
+  --  isActive = false
+  --end
+
+  --local all_towns = game.interface.getTowns()
+  --for _, town_id in pairs(all_towns) do
+  --  game.interface.setTownDevelopmentActive(town_id, isActive)
+  --end
+end
+
 local function pauseGame()
-  if game ~= nil then
     game.interface.setGameSpeed(0)
-    isGamePaused = true
-  end
 end
 
 -- ================================================================== --
@@ -21,8 +24,10 @@ end
 function data()
   return {
     update = function()
-      if not isGamePaused then
+      if isFirstRun and game then
         pauseGame()
+        toggleTownDevelopment()
+        isFirstRun = false
       end
     end
   }

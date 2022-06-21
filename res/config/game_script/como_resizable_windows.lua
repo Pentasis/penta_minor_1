@@ -30,10 +30,8 @@ local function resizableInfoWindows(gui_id, event_name)
           local window = api.gui.util.downcast(api.gui.util.getById(gui_id))
           if window then
             window:setResizable(true)
-            --window:setIcon("ui/hammer19.tga")
           end
         end
-
       end
     end
   end
@@ -44,7 +42,6 @@ local function resizableSettingsWindows()
     local window = api.gui.util.getById(gui_id)
     if window then
       window:setResizable(true)
-      --window:setIcon("ui/hammer19.tga")
     end
   end
 end

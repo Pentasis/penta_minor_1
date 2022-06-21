@@ -2,7 +2,7 @@
 
 In this TPF2 mod I combined ideas from various other mods I use(d) into one. Partly because I wanted to practice my Lua but mostly because I dislike a messy mod-list and because I wanted to change a few things. I also noticed some authors replace vanilla files in their mods, which is just bad practice.
 
-All code in this mod is written by me, from scratch. The textures amd models however are from other authors. As such I won't publish this mod on Steam or transportfever.net or any other platform.
+All code in this mod is written by me, from scratch. The textures and models however are (mostly) from other authors. As such I won't publish this mod on Steam or transportfever.net or any other platform.
 
 If there is anyone who is good with textures and icons willing to help me with that? I'm horrible at graphics and would like some sort of consistency in my mods as well as original content so I can publish it without infringing any possible copyrights.
 

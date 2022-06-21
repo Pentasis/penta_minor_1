@@ -18,10 +18,9 @@ local function passengerSeatAmount(seatProvider)
 end
 
 -- ------------------------------------------------------------------ --
--- TODO: If modded vehicle does not follow the /4 rule, it will be op. See if we can circumvent this here?
+-- TODO: If modded vehicle does not follow the /4 rule, it will be OP. See if we can circumvent this here?
 -- Is there anyway to differentiate between vanilla and modded vehicles?
 local function capacityRectifier(compartments, isList)
-  local CAPACITY_MULTIPLIER = 4 -- Base game divides by 4, so we undo this here
   local possible_cargoes
 
   for compartment = 1, #compartments do
@@ -34,11 +33,11 @@ local function capacityRectifier(compartments, isList)
     for cargo_type = 1, #possible_cargoes do
       if isList then
         if #compartments[compartment].loadConfigs[cargo_type].cargoEntries > 0 then
-          compartments[compartment].loadConfigs[cargo_type].cargoEntries[1].capacity = compartments[compartment].loadConfigs[cargo_type].cargoEntries[1].capacity * CAPACITY_MULTIPLIER
+          compartments[compartment].loadConfigs[cargo_type].cargoEntries[1].capacity = compartments[compartment].loadConfigs[cargo_type].cargoEntries[1].capacity * cargo_data.CAPACITY_MULTIPLIER
         end
       else
         if #compartments[compartment][cargo_type] > 0 then
-          compartments[compartment][cargo_type][1].capacity = compartments[compartment][cargo_type][1].capacity * CAPACITY_MULTIPLIER
+          compartments[compartment][cargo_type][1].capacity = compartments[compartment][cargo_type][1].capacity * cargo_data.CAPACITY_MULTIPLIER
         end
       end
     end
