@@ -42,7 +42,7 @@ function data()
     yearFrom = 1910,
     yearTo = 0,
 
-    carriers = { "RAIL", "ROAD" },
+    carriers = { "RAIL", "ROAD", "TRAM" },
 
     speedLimit = 200.0 / 3.6,
 
@@ -52,7 +52,7 @@ function data()
     pillarMaxDist = 66.0,
     pillarTargetDist = 36.0,
 
-    cost = 400.0,
+    cost = 300.0,
     costFactors = { 10.0, 2.0, 1.0 },
 
     noParallelStripSubdivision = true,

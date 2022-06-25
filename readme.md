@@ -34,7 +34,7 @@ Any more track-speeds seems overkill or overpowered to me.
 - Increased capacity of warehouses by factor 4.
 - Changed cargo weights to be more realistic.
 - Industry now acts as industrial magnets (cims will go to work there).
-- Tools now require steel instead of wood and goods require wood & plastic instead of steel & plastic.
+- Tools now require steel instead of wood and Goods require wood & plastic instead of steel & plastic.
 
 The base game divides all vehicle capacities by 4. The only thing this does afaik is increase the number of vehicles needed to transport everything; demand remains the same.
 
@@ -77,7 +77,9 @@ The base game divides all vehicle capacities by 4. The only thing this does afai
 - More brushes
 - Railyard tracks?
 - Colour variants to tunnel (same as bridge)?
-- 
+- Truck station entrance-roads: improve them
+- Line designations
+- Line statistics?
 
 ## Incompatible mods
 Not so much incompatible but they provide similar mechanics and are no longer needed when using this mod.

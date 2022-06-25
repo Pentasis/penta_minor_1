@@ -18,15 +18,15 @@ function data()
     materials = {
       streetPaving = {
         name = "street/rural_grass.mtl",
-        size = { 6.0, 6.0 }
+        size = { 60.0, 60.0 }
       },
       streetLane = {
         name = "street/rural_grass.mtl",
-        size = { 4.0, 4.0 }
+        size = { 60.0, 60.0 }
       },
       streetTram = {
         name = "street/rural_grass.mtl",
-        size = { 2.0, 2.0 }
+        size = { 60.0, 60.0 }
       },
       streetTramTrack = {
         name = "street/new_medium_tram_track.mtl",
@@ -34,11 +34,11 @@ function data()
       },
       crossingLane = {
         name = "street/rural_grass.mtl",
-        size = { 4.0, 4.0 }
+        size = { 60.0, 60.0 }
       },
       crossingTram = {
         name = "street/rural_grass.mtl",
-        size = { 2.0, 2.0 }
+        size = { 60.0, 60.0 }
       },
       crossingTramTrack = {
         name = "street/new_medium_tram_track.mtl",
@@ -49,7 +49,7 @@ function data()
       },
       sidewalkPaving = {
         name = "street/rural_grass.mtl",
-        size = { 6.0, 6.0 }
+        size = { 60.0, 60.0 }
       },
       catenary = {
         name = "street/tram_cable.mtl"

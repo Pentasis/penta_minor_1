@@ -1,7 +1,7 @@
 local towns = {}
 
 local STREET_ANGLES = { 0, 7, 20 }
-local DEVELOPMENT_INTERVALS = { 14, 60, 120, 180, 365, 730 }
+local DEVELOPMENT_INTERVALS = { 14, 60, 120, 180, 365, 730 } -- TODO: place this in data-struct?
 -- ---------------------------------------------------------------------
 
 function towns.tweakTowns(grid, development_interval)

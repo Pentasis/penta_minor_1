@@ -16,7 +16,7 @@ function data()
     materials = {
       streetPaving = {
         name = "street/rural_grass.mtl",
-        size = { 6.0, 6.0 }
+        size = { 60.0, 60.0 }
       }
     },
     borderGroundTex = "none.lua",

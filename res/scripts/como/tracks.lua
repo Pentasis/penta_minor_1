@@ -29,8 +29,8 @@ end
 -- ------------------------------------------------------------------ --
 
 local function changeCrossingDelay(filename, crossing)
-  if crossing.trafficDelay ~= nil and crossing.trafficDelay < 4000 then
-    crossing.trafficDelay = 4000
+  if crossing.trafficDelay ~= nil and crossing.trafficDelay < 5000 then
+    crossing.trafficDelay = 5000
   end
 
   return crossing

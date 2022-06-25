@@ -2,20 +2,21 @@ local vehicles = {}
 
 local cargo_data = require "como/data/cargo_data"
 
-local MAINTENANCE_INTERVALS = { 60, 120, 180, 365, 730 }
+local MAINTENANCE_INTERVALS = { 60, 120, 180, 365, 730 } -- TODO: place this in data-struct?
 -- ------------------------------------------------------------------ --
 
-local function passengerSeatAmount(seatProvider)
-  local seatAmount = #seatProvider.seats
-
-  for index = 1, seatAmount do
-    if seatProvider.seats[index].crew then
-      seatAmount = seatAmount - 1 -- Crew does not count towards capacity
-    end
-  end
-
-  return seatAmount
-end
+-- See to-do note under 'increaseCapacity'
+--local function passengerSeatAmount(seatProvider)
+--  local seatAmount = #seatProvider.seats
+--
+--  for index = 1, seatAmount do
+--    if seatProvider.seats[index].crew then
+--      seatAmount = seatAmount - 1 -- Crew does not count towards capacity
+--    end
+--  end
+--
+--  return seatAmount
+--end
 
 -- ------------------------------------------------------------------ --
 -- TODO: If modded vehicle does not follow the /4 rule, it will be OP. See if we can circumvent this here?
@@ -50,7 +51,10 @@ end
 local function increaseCapacity(filename, vehicle)
 
   if (vehicle.metadata.transportVehicle) then
+    -- After writing this I looked at other people's mod and I noticed they use seats to count passengers.
     -- TODO: do I need to check if capacity == seats?
+    -- Seems to me, this is not needed, but I'll revisit.
+
     --local passenger_seats = 0
     --if (vehicle.metadata.seatProvider) then
     --  passenger_seats = passengerSeatAmount(vehicle.metadata.seatProvider)

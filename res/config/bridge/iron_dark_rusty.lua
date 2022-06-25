@@ -55,6 +55,8 @@ function data()
     cost = 150.0,
     costFactors = { 10.0, 2.0, 1.0 },
 
+    noParallelStripSubdivision = true,
+
     materialsToReplace = {
       streetPaving = {
         name = "street/country_new_medium_paving.mtl",

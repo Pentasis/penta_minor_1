@@ -3,7 +3,7 @@ local helper = require "pentasis/helper_functions"
 
 local function addCheckboxToTownEditor(window, town_id)
   local window_content = window:getContent()
-  local editor_tab = window_content:getTab(4) -- Should I test if exists first?
+  local editor_tab = window_content:getTab(4) -- Should I test if exists first? If not: TODO: combine into one
   local tab_layout = editor_tab:getLayout()
   local town = api.engine.getComponent(town_id, api.type.ComponentType.TOWN)
 
