@@ -43,11 +43,11 @@ function data()
           defaultIndex = 0,
         },
         {
-          key = "como_towndev",
-          name = "Town Development",
+          key = "como_towndevinterval",
+          name = "Town Development interval",
           uiType = "BUTTON",
-          values = { "On", "Off" },
-          defaultIndex = 0,
+          values = { "1 week", "1 month", "2 months", "1 quarter", "half year", "1 year" },
+          defaultIndex = 1,
         },
       },
     },
@@ -60,7 +60,7 @@ function data()
       modVehicles.tweakVehicles(params.como_maintenance)
       modIndustry.tweakIndustry()
       modRoads.tweakStreets()
-      modTowns.tweakTowns(params.como_grid)
+      modTowns.tweakTowns(params.como_grid, params.como_towndevinterval)
       modCims.tweakBehaviour()
       modEnvironment.tweakEnvironment()
       modGui.tweakGUI()

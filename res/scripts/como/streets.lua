@@ -19,7 +19,7 @@ end
 
 local function adjustStreetSlope(filename, street)
   -- The vanilla streets do not define slope in config, so we assume modded ones do it themselves (hence we test on nil).
-  -- TODO: clean this mess up, but combining conditional throws "not a table" error.
+  -- TODO: clean this mess up; but combining this conditional throws a "not a table" error.
 
   if street.transportModesStreet ~= nil then
     if not helper.hasValue(street.transportModesStreet, "AIRCRAFT") and

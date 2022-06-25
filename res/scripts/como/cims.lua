@@ -12,7 +12,7 @@ local function overlapWardrobe(filename, character)
     charName = helper.getFileName(filename)
     charName = string.sub(charName, 1, -5)
 
-    if CIMS[charName] ~= nil then
+    if cims_data.CIMS[charName] ~= nil then
       character.metadata.availability.yearFrom = cims_data.CIMS[charName][1]
       character.metadata.availability.yearTo = cims_data.CIMS[charName][2]
     end
@@ -30,7 +30,7 @@ local function overlapCars(filename, car)
     carName = helper.getFileName(filename)
     carName = string.sub(carName, 1, -5)
 
-    if CARS[carName] ~= nil then
+    if cims_data.CARS[carName] ~= nil then
       car.metadata.availability.yearFrom = cims_data.CARS[carName][1]
       car.metadata.availability.yearTo = cims_data.CARS[carName][2]
     end

@@ -1,8 +1,6 @@
 # Consolidated Mods
 
-In this TPF2 mod I combined ideas from various other mods I use(d) into one. Partly because I wanted to practice my Lua but mostly because I dislike a messy mod-list and because I wanted to change a few things. I also noticed some authors replace vanilla files in their mods, which is just bad practice.
-
-All code in this mod is written by me, from scratch. The textures and models however are (mostly) from other authors. As such I won't publish this mod on Steam or transportfever.net or any other platform.
+In this TPF2 mod I combined ideas from various other mods. All code is written from scratch, but textures are (for now) borrowed from other mods.
 
 If there is anyone who is good with textures and icons willing to help me with that? I'm horrible at graphics and would like some sort of consistency in my mods as well as original content so I can publish it without infringing any possible copyrights.
 
@@ -15,8 +13,11 @@ All features are vanilla-esque. I.e. they either change vanilla behaviour or bui
 - Added 3 High-speed tracks with speed-limits of 40, 80 & 160 km/h.
 - Added an old, weathered track with a speed-limit of 25 km/h and no catenary when electrified.
 - Added categories for tracks.
+- Railroad crossings close sooner.
+- Trains stop further away from signals.
 
-Any more seems overkill or overpowered to me.
+Any more track-speeds seems overkill or overpowered to me.
+(Side note: I wish UG would add programmable signals to the game, so if signal A detects X, do Y.)
 
 ### Roads
 - Added 3 industrial roads (30, 50 & 60 km/h). They are based on town-streets but have narrow, flat pedestrian sidewalks. Lights on one side only and no AI-building.
@@ -35,15 +36,21 @@ Any more seems overkill or overpowered to me.
 - Industry now acts as industrial magnets (cims will go to work there).
 - Tools now require steel instead of wood and goods require wood & plastic instead of steel & plastic.
 
-The base game divides all vehicle capacities by 4. The only thing this does afaik is increase the number of vehicles needed to transport everything.
+The base game divides all vehicle capacities by 4. The only thing this does afaik is increase the number of vehicles needed to transport everything; demand remains the same.
 
 ### Vehicles
 - the BAE-146 (passenger & cargo) planes can now land on small airfields.
 - The Virgo & Hercules Towboats now have a variant that have 1 normal barge and 1 tanker barge, making them capable of transporting all cargo.
+- There is an option to change the maintenance interval.
 
 ### Bridges
 - Added some (colour) variants to iron and stone bridges.
 - Iron bridges no longer have gaps in the wrong place.
+
+### Towns
+- An option to decrease/increase town development interval.
+- In the Editor tab, you can disable/enable town growth per town (stop development) WARNING: This settings is saved even after mod has been removed.
+- Option to make town street-layout grid or no-grid.
 
 ### UI
 - Better contour-lines.
@@ -56,12 +63,9 @@ The base game divides all vehicle capacities by 4. The only thing this does afai
 - Extra brushes
 
 ### Misc
-- Railroad crossings close sooner.
 - Rocks are less white & shiny.
-- There is an option to change the maintenance interval.
 - Game always starts paused.
 - Increased render distance.
-- Less 'griddy' town layout.
 - Cars & Cims now transition longer between era's (old cars & clothes will be used longer).
 - Achievements with mods.
 - Industry button.
@@ -69,11 +73,11 @@ The base game divides all vehicle capacities by 4. The only thing this does afai
 - No end year for vehicles.
 
 ### TODO:
-- Option to stop town growth
 - Cargo station anachronism fix (cargo_lamps, cargo_pallet_jack, cargo_speakers)?
-- Town growth factor?
 - More brushes
-
+- Railyard tracks?
+- Colour variants to tunnel (same as bridge)?
+- 
 
 ## Incompatible mods
 Not so much incompatible but they provide similar mechanics and are no longer needed when using this mod.

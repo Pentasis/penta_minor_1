@@ -1,5 +1,6 @@
 local industry = {}
 
+-- TODO: move this to a data-file?
 local PRODUCTION_MULTIPLIER = 4
 
 local function increaseProduction(capacity)
@@ -9,10 +10,11 @@ end
 local function addWorkers(capacity)
   return {
     type = "INDUSTRIAL",
-    capacity = math.ceil(result.rule.capacity / PRODUCTION_MULTIPLIER),
+    capacity = math.floor((capacity / PRODUCTION_MULTIPLIER) + 0.5),  -- round
   }
 end
 
+-- TODO: not proud of this code, revisit later
 local function changeIndustry(filename, factory)
 
   if filename == "res/construction/industry/goods_factory.con" then
